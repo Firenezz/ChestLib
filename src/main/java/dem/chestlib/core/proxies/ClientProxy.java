@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package dem.chestlib.core.proxies;
 
 public class ClientProxy extends CommonProxy {
 

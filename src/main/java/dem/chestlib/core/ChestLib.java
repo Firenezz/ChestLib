@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package dem.chestlib.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,14 +9,19 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import dem.chestlib.core.proxies.CommonProxy;
 
-@Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "MyMod", acceptedMinecraftVersions = "[1.7.10]")
-public class MyMod {
+@Mod(modid = ChestLib.MODID, version = Tags.VERSION, name = "ChestLib", acceptedMinecraftVersions = "[1.7.10]")
+public class ChestLib {
 
-    public static final String MODID = "mymodid";
+    public static final String MODID = "chestlib";
+    public static final String NAME = "ChestLib";
+    public static final String VERSION = dem.chestlib.core.Tags.VERSION;
+    public static final String PROXY = "dem.chestlib.core.proxies";
+    public static final String CHANNEL = "CHESTLIB_NET_CHAN";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
-    @SidedProxy(clientSide = "com.myname.mymodid.ClientProxy", serverSide = "com.myname.mymodid.CommonProxy")
+    @SidedProxy(clientSide = PROXY + ".ClientProxy", serverSide = PROXY + ".CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package dem.chestlib;
 
 import java.io.File;
 
