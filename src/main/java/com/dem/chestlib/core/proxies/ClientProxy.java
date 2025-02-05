@@ -1,4 +1,4 @@
-package dem.chestlib.core.proxies;
+package com.dem.chestlib.core.proxies;
 
 public class ClientProxy extends CommonProxy {
 

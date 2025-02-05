@@ -1,12 +1,13 @@
-package dem.chestlib.core.proxies;
+package com.dem.chestlib.core.proxies;
+
+import com.dem.chestlib.core.ChestLibMod;
+import com.dem.chestlib.core.Config;
+import com.dem.chestlib.core.Tags;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import dem.chestlib.Config;
-import dem.chestlib.core.ChestLib;
-import dem.chestlib.core.Tags;
 
 public class CommonProxy {
 
@@ -15,8 +16,8 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         Config.synchronizeConfiguration(event.getSuggestedConfigurationFile());
 
-        ChestLib.LOG.info(Config.greeting);
-        ChestLib.LOG.info("I am MyMod at version " + Tags.VERSION);
+        ChestLibMod.LOG.info(Config.greeting);
+        ChestLibMod.LOG.info("I am MyMod at version " + Tags.VERSION);
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)

@@ -1,7 +1,9 @@
-package dem.chestlib.core;
+package com.dem.chestlib.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.dem.chestlib.core.proxies.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -9,14 +11,17 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import dem.chestlib.core.proxies.CommonProxy;
 
-@Mod(modid = ChestLib.MODID, version = Tags.VERSION, name = "ChestLib", acceptedMinecraftVersions = "[1.7.10]")
-public class ChestLib {
+@Mod(
+    modid = ChestLibMod.MODID,
+    version = ChestLibMod.VERSION,
+    name = ChestLibMod.NAME,
+    acceptedMinecraftVersions = "[1.7.10]")
+public class ChestLibMod {
 
     public static final String MODID = "chestlib";
     public static final String NAME = "ChestLib";
-    public static final String VERSION = dem.chestlib.core.Tags.VERSION;
+    public static final String VERSION = Tags.VERSION;
     public static final String PROXY = "dem.chestlib.core.proxies";
     public static final String CHANNEL = "CHESTLIB_NET_CHAN";
     public static final Logger LOG = LogManager.getLogger(MODID);

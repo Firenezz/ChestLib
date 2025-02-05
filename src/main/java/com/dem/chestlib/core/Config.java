@@ -1,4 +1,4 @@
-package dem.chestlib;
+package com.dem.chestlib.core;
 
 import java.io.File;
 
