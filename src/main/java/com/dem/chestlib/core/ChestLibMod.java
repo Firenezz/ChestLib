@@ -22,7 +22,7 @@ public class ChestLibMod {
     public static final String MODID = "chestlib";
     public static final String NAME = "ChestLib";
     public static final String VERSION = Tags.VERSION;
-    public static final String PROXY = "dem.chestlib.core.proxies";
+    public static final String PROXY = "com.dem.chestlib.core.proxies";
     public static final String CHANNEL = "CHESTLIB_NET_CHAN";
     public static final Logger LOG = LogManager.getLogger(MODID);
 

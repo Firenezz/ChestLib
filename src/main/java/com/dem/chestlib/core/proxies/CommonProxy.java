@@ -16,8 +16,7 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         Config.synchronizeConfiguration(event.getSuggestedConfigurationFile());
 
-        ChestLibMod.LOG.info(Config.greeting);
-        ChestLibMod.LOG.info("I am MyMod at version " + Tags.VERSION);
+        ChestLibMod.LOG.info("I am Chestlib at version " + Tags.VERSION);
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
