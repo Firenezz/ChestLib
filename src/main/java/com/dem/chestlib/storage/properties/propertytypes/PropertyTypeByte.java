@@ -1,9 +1,10 @@
 package com.dem.chestlib.storage.properties.propertytypes;
 
-import com.dem.chestlib.util.nbt.NBTReaderUtil;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagByte;
 import net.minecraft.util.ResourceLocation;
+
+import com.dem.chestlib.util.nbt.NBTReaderUtil;
 
 public class PropertyTypeByte extends PropertyTypeBase<Byte> {
 
@@ -13,7 +14,8 @@ public class PropertyTypeByte extends PropertyTypeBase<Byte> {
 
     @Override
     public Byte readValue(NBTBase nbt) {
-        return NBTReaderUtil.readByteValue(nbt).orElse(this.getDefault());
+        return NBTReaderUtil.readByteValue(nbt)
+            .orElse(this.getDefault());
     }
 
     @Override
